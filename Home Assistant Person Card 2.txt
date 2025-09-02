@@ -42,13 +42,26 @@ cards:
               - pointer-events: none
               - display: grid
               - border: 5px solid
-              - border-color: |-
-                  [[[
-                    if (states['person.stuart_scott'].state =='home') {
-                    return "#00cc00"; 
-                    } else {
-                    return "#ed1602";}
-                  ]]]
+              - color: >-
+                  [[[ if (states["person.stuart_scott"].state == "home") return
+                  "#83ff52"; if  (states["person.stuart_scott"].state == "Carols
+                  W") return  "#000099"; if (states["person.stuart_scott"].state
+                  == "Cathkin HS") return "#000099"; if                  
+                  (states["person.stuart_scott"].state == "Celtic Park") return
+                  "#000099"; if (states["person.stuart_scott"].state == "Dylans
+                  Club") return "#000099"; if
+                  (states["person.stuart_scott"].state == "Hampden") return
+                  "#000099"; if  (states["person.stuart_scott"].state == "Keiras
+                  D") return "#000099"; if  (states["person.stuart_scott"].state
+                  == "Partick T") return "#000099"; if 
+                  (states["person.stuart_scott"].state == "Pure Gym") return
+                  "#000099"; if  (states["person.stuart_scott"].state ==
+                  "School") return "#000099"; if 
+                  (states["person.stuart_scott"].state == "Sonnys") return
+                  "#000099"; if  (states["person.stuart_scott"].state ==
+                  "Stonelaw HS") return "#000099"; if 
+                  (states["person.stuart_scott"].state == "Toryglen") return
+                  "#000099";  else return "#ed1602"; ]]] 
               - border-radius: 500px
               - margin: 0 +7% 0 0
               - justify-self: center
@@ -59,7 +72,24 @@ cards:
               - font-size: 20px
               - color: >-
                   [[[ if (states["person.stuart_scott"].state == "home") return
-                  "#83ff52"; else return "#ed1602"; ]]]
+                  "#83ff52"; if  (states["person.stuart_scott"].state == "Carols
+                  W") return  "#000099"; if (states["person.stuart_scott"].state
+                  == "Cathkin HS") return "#000099"; if                  
+                  (states["person.stuart_scott"].state == "Celtic Park") return
+                  "#000099"; if (states["person.stuart_scott"].state == "Dylans
+                  Club") return "#000099"; if
+                  (states["person.stuart_scott"].state == "Hampden") return
+                  "#000099"; if  (states["person.stuart_scott"].state == "Keiras
+                  D") return "#000099"; if  (states["person.stuart_scott"].state
+                  == "Partick T") return "#000099"; if 
+                  (states["person.stuart_scott"].state == "Pure Gym") return
+                  "#000099"; if  (states["person.stuart_scott"].state ==
+                  "School") return "#000099"; if 
+                  (states["person.stuart_scott"].state == "Sonnys") return
+                  "#000099"; if  (states["person.stuart_scott"].state ==
+                  "Stonelaw HS") return "#000099"; if 
+                  (states["person.stuart_scott"].state == "Toryglen") return
+                  "#000099";  else return "#ed1602"; ]]] 
             battery:
               - align-self: right
               - position: absolute
@@ -109,7 +139,7 @@ cards:
               - color: >-
                   [[[ if
                   (states["binary_sensor.stuartscotts_iphone_focus"].state ==
-                  "off") return "#83ff52"; else return "#e45649"; ]]] 
+                  "off") return "#83ff52"; else return "#ed1602"; ]]] 
             wifi:
               - align-self: right
               - position: absolute
@@ -119,7 +149,7 @@ cards:
               - color: >-
                   [[[ if
                   (states["sensor.stuartscotts_iphone_connection_type"].state ==
-                  "Cellular") return "#e45649"; else return "#83ff52";
+                  "Cellular") return "#ed1602"; else return "#83ff52";
                   ]]]                    
         custom_fields:
           icon: >
@@ -130,102 +160,472 @@ cards:
             [[[
               if (states['person.stuart_scott'].state =='not_home') { 
               return `<ha-icon icon="mdi:home-export-outline"
-                style="width: 25px; height: 25px; color: '#ed1602';">
+                style="width: 20px; height: 26px; color: '#ed1602';">
                 </ha-icon><span> Away</span>`;
               } 
               if (states['person.stuart_scott'].state =='home') { 
               return `<ha-icon 
                 icon="mdi:home"
-                style="width: 25px; height: 25px; color: 00ff00;">
+                style="width: 20px; height: 26px; color: #83ff52;">
                 </ha-icon><span> ${entity.state}</span>`;
+              } 
+              if (states['person.stuart_scott'].state =='Carols W') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.stuart_scott'].state =='Cathkin HS') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;      
+              } 
+              if (states['person.stuart_scott'].state =='Celtic Park') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;        
+              } 
+              if (states['person.stuart_scott'].state =='Dylans Club') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.stuart_scott'].state =='Hampden') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.stuart_scott'].state =='Keiras D') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.stuart_scott'].state =='Partick T') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;     
+              } 
+              if (states['person.stuart_scott'].state =='Partick T') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.stuart_scott'].state =='Pure Gym') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;    
+              } 
+              if (states['person.stuart_scott'].state =='School') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;      
+              } 
+              if (states['person.stuart_scott'].state =='Sonnys') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.stuart_scott'].state =='Stonelaw HS') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.stuart_scott'].state =='Toryglen') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;                 
               } else {
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 25px; height: 25px; color: #ed1602;">
+                style="width: 20px; height: 20px; color: #ed1602;">
                 </ha-icon><span> ${entity.state}</span>`;
               }
             ]]]  
           battery: |
             [[[
-              if (states["sensor.stuartscotts_iphone_battery_level"].state <= 30) { 
+                if (states["sensor.stuartscotts_iphone_battery_level"].state < 30)
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-30"
                 style="width: 30px; height: 30px; color: #ed1602;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;
+              }  
+                if (states["sensor.stuartscotts_iphone_battery_level"].state < 30)
+                 if (states['sensor.stuartscotts_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed1602;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;   
               }                 
-                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 50) { 
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 50)
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-50"
                 style="width: 30px; height: 30px; color: #ed8302;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;      
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 50)
+                 if (states['sensor.stuartscotts_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed8302;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;        
               }                 
-                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 60) { 
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 60)
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-60"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;   
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 60)
+                 if (states['sensor.stuartscotts_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;     
               }                 
-                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 70) { 
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 70)
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
-                icon="mdi:battery-70"
+                icon="mdi:battery-60"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;   
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 70)
+                 if (states['sensor.stuartscotts_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;    
               }                 
-                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 80) { 
-                return `<ha-icon
-                icon="mdi:battery-80"
-                style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;     
-              }                 
-                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 90) { 
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 80)
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-90"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;                       
-              } else {
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 80)
+                 if (states['sensor.stuartscotts_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;      
+              }                 
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 90)
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
+                return `<ha-icon
+                icon="mdi:battery-90"
+                style="width: 30px; height: 30px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 90)
+                 if (states['sensor.stuartscotts_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;   
+              }                
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 100)
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery"
+                style="width: 30px; height: 30px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`; 
+              }                 
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 100)
+                 if (states['sensor.stuartscotts_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;                      
+              } else {
+                return `<ha-icon
+                icon="mdi:batter"
                 style="width: 30px; height: 30px; color: #83ff52;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;
               }
             ]]]
           watch: |
             [[[
-              if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 30) { 
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 30)
+                if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
                 style="width: 28px; height: 28px; color: #ed1602;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 30)
+                 if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed1602;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;   
               }                 
-                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 50) { 
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 50)
+                if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
-                style="width: 28px; height: 28px; color: #ed1602;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;      
+                style="width: 28px; height: 28px; color: #ed8302;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 50)
+                 if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed8302;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;      
               }                 
-                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 60) { 
-                return `<ha-icon
-                icon="mdi:watch"
-                style="width: 28px; height: 28px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;   
-              }                 
-                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 70) { 
-                return `<ha-icon
-                icon="mdi:watch"
-                style="width: 28px; height: 28px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;   
-              }                 
-                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 80) { 
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 60)
+                if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
                 style="width: 28px; height: 28px; color: #83ff52;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 60)
+                 if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;    
               }                 
-                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 90) { 
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 70)
+                if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
-                style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;                       
+                style="width: 28px; height: 28px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 70)
+                 if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;   
+              }                 
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 80)
+                if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Not Charging') { 
+                return `<ha-icon
+                icon="mdi:watch"
+                style="width: 28px; height: 28px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 80)
+                 if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;    
+              }                         
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 90)
+                if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Not Charging') { 
+                return `<ha-icon
+                icon="mdi:watch"
+                style="width: 28px; height: 28px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 90)
+                 if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`; 
+              }      
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 100)
+                if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Not Charging') { 
+                return `<ha-icon
+                icon="mdi:watch"
+                style="width: 28px; height: 28px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 100)
+                 if (states['sensor.stuartscotts_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;              
               } else {
                 return `<ha-icon
                 icon="mdi:watch"
@@ -293,13 +693,27 @@ cards:
               - pointer-events: none
               - display: grid
               - border: 5px solid
-              - border-color: |-
-                  [[[
-                    if (states['person.carol_deeley'].state =='home') {
-                    return "#00cc00"; 
-                    } else {
-                    return "#ed1602";}
-                  ]]]
+              - color: >-
+                  [[[ if (states["person.carol_deeley"].state == "home") return
+                  "#83ff52"; if  (states["person.carol_deeley"].state == "Carols
+                  W") return  "#000099"; if (states["person.carol_deeley"].state
+                  == "Cathkin HS") return "#000099"; if                  
+                  (states["person.carol_deeley"].state == "Celtic Park") return
+                  "#000099"; if (states["person.carol_deeley"].state == "Dylans
+                  Club") return "#000099"; if
+                  (states["person.carol_deeley"].state == "Hampden") return
+                  "#000099"; if  (states["person.carol_deeley"].state == "Keiras
+                  D") return "#000099"; if  (states["person.carol_deeley"].state
+                  == "Partick T") return "#000099"; if 
+                  (states["person.carol_deeley"].state == "Pure Gym") return
+                  "#000099"; if  (states["person.carol_deeley"].state ==
+                  "School") return "#000099"; if 
+                  (states["person.carol_deeley"].state == "Sonnys") return
+                  "#000099"; if  (states["person.carol_deeley"].state ==
+                  "Stonelaw HS") return "#000099"; if 
+                  (states["person.carol_deeley"].state == "Toryglen") return
+                  "#000099";  else return "#ed1602"; ]]] 
+              - border-radius: 500px
               - border-radius: 500px
               - margin: 0 +7% 0 0
               - justify-self: center
@@ -310,11 +724,29 @@ cards:
               - font-size: 20px
               - color: >-
                   [[[ if (states["person.carol_deeley"].state == "home") return
-                  "#83ff52"; else return "#ed1602"; ]]]
+                  "#83ff52"; if  (states["person.carol_deeley"].state == "Carols
+                  W") return  "#000099"; if (states["person.carol_deeley"].state
+                  == "Cathkin HS") return "#000099"; if                  
+                  (states["person.carol_deeley"].state == "Celtic Park") return
+                  "#000099"; if (states["person.carol_deeley"].state == "Dylans
+                  Club") return "#000099"; if
+                  (states["person.carol_deeley"].state == "Hampden") return
+                  "#000099"; if  (states["person.carol_deeley"].state == "Keiras
+                  D") return "#000099"; if  (states["person.carol_deeley"].state
+                  == "Partick T") return "#000099"; if 
+                  (states["person.carol_deeley"].state == "Pure Gym") return
+                  "#000099"; if  (states["person.carol_deeley"].state ==
+                  "School") return "#000099"; if 
+                  (states["person.carol_deeley"].state == "Sonnys") return
+                  "#000099"; if  (states["person.carol_deeley"].state ==
+                  "Stonelaw HS") return "#000099"; if 
+                  (states["person.carol_deeley"].state == "Toryglen") return
+                  "#000099";  else return "#ed1602"; ]]] 
             battery:
-              - margin-bottom: "-5px"
-              - align-self: middle
-              - justify-self: start
+              - align-self: right
+              - position: absolute
+              - left: 0%
+              - top: 80%
               - font-size: 20px
               - color: >-
                   [[[ if (states["sensor.carols_iphone_battery_level"].state <=
@@ -328,7 +760,7 @@ cards:
                   (states["sensor.carols_iphone_battery_level"].state <= 80)
                   return "#83ff52"; if                  
                   (states["sensor.carols_iphone_battery_level"].state <= 90)
-                  return "#83ff52"; else return "#83ff52"; ]]] 
+                  return "#83ff52"; else return "#83ff52"; ]]]     
             focus:
               - align-self: right
               - position: absolute
@@ -337,7 +769,7 @@ cards:
               - top: 4%
               - color: >-
                   [[[ if (states["binary_sensor.carols_iphone_focus"].state ==
-                  "off") return "#83ff52"; else return "#e45649"; ]]] 
+                  "off") return "#83ff52"; else return "#ed1602"; ]]] 
             wifi:
               - align-self: right
               - position: absolute
@@ -346,8 +778,8 @@ cards:
               - top: 4%
               - color: >-
                   [[[ if (states["sensor.carols_iphone_connection_type"].state
-                  == "Cellular") return "#e45649"; else return "#83ff52";
-                  ]]]                      
+                  == "Cellular") return "#ed1602"; else return "#83ff52";
+                  ]]]                    
         custom_fields:
           icon: >
             [[[ return entity === undefined ? null : `<img
@@ -363,59 +795,283 @@ cards:
               if (states['person.carol_deeley'].state =='home') { 
               return `<ha-icon 
                 icon="mdi:home"
-                style="width: 20px; height: 26px; color: 00ff00;">
+                style="width: 20px; height: 26px; color: #83ff52;">
                 </ha-icon><span> ${entity.state}</span>`;
+              } 
+              if (states['person.carol_deeley'].state =='Carols W') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.carol_deeley'].state =='Cathkin HS') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;      
+              } 
+              if (states['person.carol_deeley'].state =='Celtic Park') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;        
+              } 
+              if (states['person.carol_deeley'].state =='Dylans Club') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.carol_deeley'].state =='Hampden') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.carol_deeley'].state =='Keiras D') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.carol_deeley'].state =='Partick T') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;     
+              } 
+              if (states['person.carol_deeley'].state =='Partick T') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.carol_deeley'].state =='Pure Gym') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;    
+              } 
+              if (states['person.carol_deeley'].state =='School') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;      
+              } 
+              if (states['person.carol_deeley'].state =='Sonnys') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.carol_deeley'].state =='Stonelaw HS') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.carol_deeley'].state =='Toryglen') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;                 
               } else {
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
                 style="width: 20px; height: 20px; color: #ed1602;">
                 </ha-icon><span> ${entity.state}</span>`;
               }
-            ]]]  
+            ]]]   
           battery: |
             [[[
-              if (states["sensor.carols_iphone_battery_level"].state < 30) { 
+                if (states["sensor.carols_iphone_battery_level"].state < 30)
+                if (states['sensor.carols_iphone_battery_state'].state =='Not Charging'){ 
                 return `<ha-icon
                 icon="mdi:battery-30"
                 style="width: 30px; height: 30px; color: #ed1602;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;
+              }  
+                if (states["sensor.carols_iphone_battery_level"].state < 30)
+                 if (states['sensor.carols_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed1602;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;   
               }                 
-                if (states["sensor.carols_iphone_battery_level"].state <= 50) { 
+                if (states["sensor.carols_iphone_battery_level"].state <= 50)
+                if (states['sensor.carols_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-50"
                 style="width: 30px; height: 30px; color: #ed8302;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;      
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.carols_iphone_battery_level"].state <= 50)
+                 if (states['sensor.carols_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed8302;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;        
               }                 
-                if (states["sensor.carols_iphone_battery_level"].state <= 60) { 
+                if (states["sensor.carols_iphone_battery_level"].state <= 60)
+                if (states['sensor.carols_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-60"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;   
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.carols_iphone_battery_level"].state <= 60)
+                 if (states['sensor.carols_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;     
               }                 
-                if (states["sensor.carols_iphone_battery_level"].state <= 70) { 
+                if (states["sensor.carols_iphone_battery_level"].state <= 70)
+                if (states['sensor.carols_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
-                icon="mdi:battery-70"
-                style="width: 30px; height: 34px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;   
-              }                 
-                if (states["sensor.carols_iphone_battery_level"].state <= 80) { 
-                return `<ha-icon
-                icon="mdi:battery-80"
+                icon="mdi:battery-60"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;     
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.carols_iphone_battery_level"].state <= 70)
+                 if (states['sensor.carols_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;    
               }                 
-                if (states["sensor.carols_iphone_battery_level"].state <= 90) { 
+                if (states["sensor.carols_iphone_battery_level"].state <= 80)
+                if (states['sensor.carols_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-90"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;                       
-              } else {
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.carols_iphone_battery_level"].state <= 80)
+                 if (states['sensor.carols_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;      
+              }                 
+                if (states["sensor.carols_iphone_battery_level"].state <= 90)
+                if (states['sensor.carols_iphone_battery_state'].state =='Not Charging') { 
+                return `<ha-icon
+                icon="mdi:battery-90"
+                style="width: 30px; height: 30px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.carols_iphone_battery_level"].state <= 90)
+                 if (states['sensor.carols_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;   
+              }                
+                if (states["sensor.carols_iphone_battery_level"].state <= 100)
+                if (states['sensor.carols_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery"
                 style="width: 30px; height: 30px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`; 
+              }                 
+                if (states["sensor.carols_iphone_battery_level"].state <= 100)
+                 if (states['sensor.carols_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;                      
+              } else {
+                return `<ha-icon
+                icon="mdi:batter"
+                style="width: 30px; height: 30px; color: #83ff52;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;
               }
-            ]]]
+            ]]]             
           focus: |
             [[[
               if (states["binary_sensor.carols_iphone_focus"].state == "on")
@@ -476,13 +1132,26 @@ cards:
               - pointer-events: none
               - display: grid
               - border: 5px solid
-              - border-color: |-
-                  [[[
-                    if (states['person.dylan_scott'].state =='home') {
-                    return "#00cc00"; 
-                    } else {
-                    return "#ed1602";}
-                  ]]]
+              - color: >-
+                  [[[ if (states["person.dylan_scott"].state == "home") return
+                  "#83ff52"; if  (states["person.dylan_scott"].state == "Carols
+                  W") return  "#000099"; if (states["person.dylan_scott"].state
+                  == "Cathkin HS") return "#000099"; if                  
+                  (states["person.dylan_scott"].state == "Celtic Park") return
+                  "#000099"; if (states["person.dylan_scott"].state == "Dylans
+                  Club") return "#000099"; if
+                  (states["person.dylan_scott"].state == "Hampden") return
+                  "#000099"; if  (states["person.dylan_scott"].state == "Keiras
+                  D") return "#000099"; if  (states["person.dylan_scott"].state
+                  == "Partick T") return "#000099"; if 
+                  (states["person.dylan_scott"].state == "Pure Gym") return
+                  "#000099"; if  (states["person.dylan_scott"].state ==
+                  "School") return "#000099"; if 
+                  (states["person.dylan_scott"].state == "Sonnys") return
+                  "#000099"; if  (states["person.dylan_scott"].state ==
+                  "Stonelaw HS") return "#000099"; if 
+                  (states["person.dylan_scott"].state == "Toryglen") return
+                  "#000099";  else return "#ed1602"; ]]] 
               - border-radius: 500px
               - margin: 0 +7% 0 0
               - justify-self: center
@@ -493,11 +1162,29 @@ cards:
               - font-size: 20px
               - color: >-
                   [[[ if (states["person.dylan_scott"].state == "home") return
-                  "#83ff52"; else return "#ed1602"; ]]]
+                  "#83ff52"; if  (states["person.dylan_scott"].state == "Carols
+                  W") return  "#000099"; if (states["person.dylan_scott"].state
+                  == "Cathkin HS") return "#000099"; if                  
+                  (states["person.dylan_scott"].state == "Celtic Park") return
+                  "#000099"; if (states["person.dylan_scott"].state == "Dylans
+                  Club") return "#000099"; if
+                  (states["person.dylan_scott"].state == "Hampden") return
+                  "#000099"; if  (states["person.dylan_scott"].state == "Keiras
+                  D") return "#000099"; if  (states["person.dylan_scott"].state
+                  == "Partick T") return "#000099"; if 
+                  (states["person.dylan_scott"].state == "Pure Gym") return
+                  "#000099"; if  (states["person.dylan_scott"].state ==
+                  "School") return "#000099"; if 
+                  (states["person.dylan_scott"].state == "Sonnys") return
+                  "#000099"; if  (states["person.dylan_scott"].state ==
+                  "Stonelaw HS") return "#000099"; if 
+                  (states["person.dylan_scott"].state == "Toryglen") return
+                  "#000099";  else return "#ed1602"; ]]] 
             battery:
-              - margin-bottom: "-5px"
-              - align-self: middle
-              - justify-self: start
+              - align-self: right
+              - position: absolute
+              - left: 0%
+              - top: 80%
               - font-size: 20px
               - color: >-
                   [[[ if (states["sensor.dylans_iphone_battery_level"].state <=
@@ -511,7 +1198,7 @@ cards:
                   (states["sensor.dylans_iphone_battery_level"].state <= 80)
                   return "#83ff52"; if                  
                   (states["sensor.dylans_iphone_battery_level"].state <= 90)
-                  return "#83ff52"; else return "#83ff52"; ]]] 
+                  return "#83ff52"; else return "#83ff52"; ]]]     
             watch:
               - align-self: right
               - position: absolute
@@ -519,20 +1206,18 @@ cards:
               - right: 85%
               - top: 40%
               - color: >-
-                  [[[ if
-                  (states["sensor.stuartscotts_iphone_watch_battery"].state <=
+                  [[[ if (states["sensor.dylans_iphone_watch_battery"].state <=
                   30) return "#ed1602"; if
-                  (states["sensor.stuartscotts_iphone_watch_battery"].state <=
-                  50) return "#ed8302"; if
-                  (states["sensor.stuartscotts_iphone_watch_battery"].state <=
-                  60) return "#83ff52"; if
-                  (states["sensor.stuartscotts_iphone_watch_battery"].state <=
-                  70) return "#83ff52"; if
-                  (states["sensor.stuartscotts_iphone_watch_battery"].state <=
-                  80) return "#83ff52"; if                  
-                  (states["sensor.stuartscotts_iphone_watch_battery"].state <=
-                  90) return "#323ea8"; else return "#83ff52";
-                  ]]]                    
+                  (states["sensor.dylans_iphone_watch_battery"].state <= 50)
+                  return "#ed8302"; if
+                  (states["sensor.dylans_iphone_watch_battery"].state <= 60)
+                  return "#83ff52"; if
+                  (states["sensor.dylans_iphone_watch_battery"].state <= 70)
+                  return "#83ff52"; if
+                  (states["sensor.dylans_iphone_watch_battery"].state <= 80)
+                  return "#83ff52"; if                  
+                  (states["sensor.dylans_iphone_watch_battery"].state <= 90)
+                  return "#323ea8"; else return "#83ff52"; ]]]  
             focus:
               - align-self: right
               - position: absolute
@@ -541,7 +1226,7 @@ cards:
               - top: 4%
               - color: >-
                   [[[ if (states["binary_sensor.dylans_iphone_focus"].state ==
-                  "off") return "#83ff52"; else return "#e45649"; ]]] 
+                  "off") return "#83ff52"; else return "#ed1602"; ]]] 
             wifi:
               - align-self: right
               - position: absolute
@@ -550,8 +1235,8 @@ cards:
               - top: 4%
               - color: >-
                   [[[ if (states["sensor.dylans_iphone_connection_type"].state
-                  == "Cellular") return "#e45649"; else return "#83ff52";
-                  ]]]                     
+                  == "Cellular") return "#ed1602"; else return "#83ff52";
+                  ]]]                    
         custom_fields:
           icon: >
             [[[ return entity === undefined ? null : `<img
@@ -567,103 +1252,473 @@ cards:
               if (states['person.dylan_scott'].state =='home') { 
               return `<ha-icon 
                 icon="mdi:home"
-                style="width: 20px; height: 26px; color: 00ff00;">
+                style="width: 20px; height: 26px; color: #83ff52;">
                 </ha-icon><span> ${entity.state}</span>`;
+              } 
+              if (states['person.dylan_scott'].state =='Carols W') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.dylan_scott'].state =='Cathkin HS') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;      
+              } 
+              if (states['person.dylan_scott'].state =='Celtic Park') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;        
+              } 
+              if (states['person.dylan_scott'].state =='Dylans Club') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.dylan_scott'].state =='Hampden') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.dylan_scott'].state =='Keiras D') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.dylan_scott'].state =='Partick T') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;     
+              } 
+              if (states['person.dylan_scott'].state =='Partick T') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;   
+              } 
+              if (states['person.dylan_scott'].state =='Pure Gym') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;    
+              } 
+              if (states['person.dylan_scott'].state =='School') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;      
+              } 
+              if (states['person.dylan_scott'].state =='Sonnys') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.dylan_scott'].state =='Stonelaw HS') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`; 
+              } 
+              if (states['person.dylan_scott'].state =='Toryglen') { 
+              return `<ha-icon 
+                icon="mdi:map-marker-radius"
+                style="width: 20px; height: 26px; color: #000099;">
+                </ha-icon><span> ${entity.state}</span>`;                 
               } else {
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
                 style="width: 20px; height: 20px; color: #ed1602;">
                 </ha-icon><span> ${entity.state}</span>`;
               }
-            ]]]  
+            ]]]   
           battery: |
             [[[
-              if (states["sensor.dylans_iphone_battery_level"].state <= 30) { 
+                if (states["sensor.dylans_iphone_battery_level"].state < 30)
+                if (states['sensor.dylans_iphone_battery_state'].state =='Not Charging'){ 
                 return `<ha-icon
                 icon="mdi:battery-30"
                 style="width: 30px; height: 30px; color: #ed1602;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;
+              }  
+                if (states["sensor.dylans_iphone_battery_level"].state < 30)
+                 if (states['sensor.dylans_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed1602;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;   
               }                 
-                if (states["sensor.dylans_iphone_battery_level"].state <= 50) { 
+                if (states["sensor.dylans_iphone_battery_level"].state <= 50)
+                if (states['sensor.dylans_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-50"
                 style="width: 30px; height: 30px; color: #ed8302;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;      
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.dylans_iphone_battery_level"].state <= 50)
+                 if (states['sensor.dylans_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed8302;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;        
               }                 
-                if (states["sensor.dylans_iphone_battery_level"].state <= 60) { 
+                if (states["sensor.dylans_iphone_battery_level"].state <= 60)
+                if (states['sensor.dylans_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-60"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;   
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.dylans_iphone_battery_level"].state <= 60)
+                 if (states['sensor.dylans_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;     
               }                 
-                if (states["sensor.dylans_iphone_battery_level"].state <= 70) { 
+                if (states["sensor.dylans_iphone_battery_level"].state <= 70)
+                if (states['sensor.dylans_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
-                icon="mdi:battery-70"
+                icon="mdi:battery-60"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;   
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.dylans_iphone_battery_level"].state <= 70)
+                 if (states['sensor.dylans_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;    
               }                 
-                if (states["sensor.dylans_iphone_battery_level"].state <= 80) { 
-                return `<ha-icon
-                icon="mdi:battery-80"
-                style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;     
-              }                 
-                if (states["sensor.dylans_iphone_battery_level"].state <= 90) { 
+                if (states["sensor.dylans_iphone_battery_level"].state <= 80)
+                if (states['sensor.dylans_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-90"
                 style="width: 30px; height: 30px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;                       
-              } else {
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.dylans_iphone_battery_level"].state <= 80)
+                 if (states['sensor.dylans_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;      
+              }                 
+                if (states["sensor.dylans_iphone_battery_level"].state <= 90)
+                if (states['sensor.dylans_iphone_battery_state'].state =='Not Charging') { 
+                return `<ha-icon
+                icon="mdi:battery-90"
+                style="width: 30px; height: 30px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;  
+              }      
+                if (states["sensor.dylans_iphone_battery_level"].state <= 90)
+                 if (states['sensor.dylans_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;   
+              }                
+                if (states["sensor.dylans_iphone_battery_level"].state <= 100)
+                if (states['sensor.dylans_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery"
+                style="width: 30px; height: 30px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`; 
+              }                 
+                if (states["sensor.dylans_iphone_battery_level"].state <= 100)
+                 if (states['sensor.dylans_iphone_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:battery-charging"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;                      
+              } else {
+                return `<ha-icon
+                icon="mdi:batter"
                 style="width: 30px; height: 30px; color: #83ff52;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;
               }
             ]]]
           watch: |
             [[[
-              if (states["sensor.dylans_iphone_watch_battery"].state <= 30) { 
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 30)
+                if (states['sensor.dylans_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
                 style="width: 28px; height: 28px; color: #ed1602;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 30)
+                 if (states['sensor.dylans_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed1602;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;   
               }                 
-                if (states["sensor.dylans_iphone_watch_battery"].state <= 50) { 
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 50)
+                if (states['sensor.dylans_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
-                style="width: 28px; height: 28px; color: #ed1602;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;      
+                style="width: 28px; height: 28px; color: #ed8302;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 50)
+                 if (states['sensor.dylans_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #ed8302;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;      
               }                 
-                if (states["sensor.dylans_iphone_watch_battery"].state <= 60) { 
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 60)
+                if (states['sensor.dylans_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
                 style="width: 28px; height: 28px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;   
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 60)
+                 if (states['sensor.dylans_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;    
               }                 
-                if (states["sensor.dylans_iphone_watch_battery"].state <= 70) { 
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 70)
+                if (states['sensor.dylans_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
                 style="width: 28px; height: 28px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;   
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 70)
+                 if (states['sensor.dylans_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;   
               }                 
-                if (states["sensor.stuartscotts_iphone_watch_battery"].state <= 80) { 
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 80)
+                if (states['sensor.dylans_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
                 style="width: 28px; height: 28px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_watch_battery'].state}%</span></span>`;     
-              }                 
-                if (states["sensor.dylans_iphone_watch_battery"].state <= 90) { 
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 80)
+                 if (states['sensor.dylans_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;    
+              }                         
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 90)
+                if (states['sensor.dylans_iphone_watch_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:watch"
                 style="width: 28px; height: 28px; color: #83ff52;">
-                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;                       
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 90)
+                 if (states['sensor.dylans_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`; 
+              }      
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 100)
+                if (states['sensor.dylans_iphone_watch_battery_state'].state =='Not Charging') { 
+                return `<ha-icon
+                icon="mdi:watch"
+                style="width: 28px; height: 28px; color: #83ff52;">
+                </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;     
+              }       
+                if (states["sensor.dylans_iphone_watch_battery"].state <= 100)
+                 if (states['sensor.dylans_iphone_watch_battery_state'].state =='Charging') { 
+                    return `
+                     <style>   
+                       @keyframes flash {
+                         0% { opacity: 1; }
+                         50% { opacity: 0.5; }
+                         100% { opacity: 1; }
+                         }
+                         .flashing {
+                           animation: flash 2s infinite;
+                         }
+                       </style>
+                       <ha-icon
+                         icon="mdi:watch"
+                         class="flashing"
+                         style="width: 30px; height: 30px; color: #83ff52;">
+                       </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;              
               } else {
                 return `<ha-icon
                 icon="mdi:watch"
                 style="width: 28px; height: 28px; color: #83ff52;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;
               }
-            ]]]              
+            ]]]             
           focus: |
             [[[
               if (states["binary_sensor.dylans_iphone_focus"].state == "on")
