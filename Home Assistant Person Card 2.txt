@@ -45,23 +45,23 @@ cards:
               - color: >-
                   [[[ if (states["person.stuart_scott"].state == "home") return
                   "#83ff52"; if  (states["person.stuart_scott"].state == "Carols
-                  W") return  "#000099"; if (states["person.stuart_scott"].state
-                  == "Cathkin HS") return "#000099"; if                  
+                  W") return  "#eeedf2"; if (states["person.stuart_scott"].state
+                  == "Cathkin HS") return "#eeedf2"; if                  
                   (states["person.stuart_scott"].state == "Celtic Park") return
-                  "#000099"; if (states["person.stuart_scott"].state == "Dylans
-                  Club") return "#000099"; if
+                  "#eeedf2"; if (states["person.stuart_scott"].state == "Dylans
+                  Club") return "#eeedf2"; if
                   (states["person.stuart_scott"].state == "Hampden") return
-                  "#000099"; if  (states["person.stuart_scott"].state == "Keiras
-                  D") return "#000099"; if  (states["person.stuart_scott"].state
-                  == "Partick T") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.stuart_scott"].state == "Keiras
+                  D") return "#eeedf2"; if  (states["person.stuart_scott"].state
+                  == "Partick T") return "#eeedf2"; if 
                   (states["person.stuart_scott"].state == "Pure Gym") return
-                  "#000099"; if  (states["person.stuart_scott"].state ==
-                  "School") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.stuart_scott"].state ==
+                  "School") return "#eeedf2"; if 
                   (states["person.stuart_scott"].state == "Sonnys") return
-                  "#000099"; if  (states["person.stuart_scott"].state ==
-                  "Stonelaw HS") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.stuart_scott"].state ==
+                  "Stonelaw HS") return "#eeedf2"; if 
                   (states["person.stuart_scott"].state == "Toryglen") return
-                  "#000099";  else return "#ed1602"; ]]] 
+                  "#eeedf2";  else return "#ed1602"; ]]] 
               - border-radius: 500px
               - margin: 0 +7% 0 0
               - justify-self: center
@@ -69,33 +69,33 @@ cards:
             status:
               - justify-self: end
               - margin-bottom: "-5px"
-              - font-size: 20px
+              - font-size: 15px
               - color: >-
                   [[[ if (states["person.stuart_scott"].state == "home") return
                   "#83ff52"; if  (states["person.stuart_scott"].state == "Carols
-                  W") return  "#000099"; if (states["person.stuart_scott"].state
-                  == "Cathkin HS") return "#000099"; if                  
+                  W") return  "#eeedf2"; if (states["person.stuart_scott"].state
+                  == "Cathkin HS") return "#eeedf2"; if                  
                   (states["person.stuart_scott"].state == "Celtic Park") return
-                  "#000099"; if (states["person.stuart_scott"].state == "Dylans
-                  Club") return "#000099"; if
+                  "#eeedf2"; if (states["person.stuart_scott"].state == "Dylans
+                  Club") return "#eeedf2"; if
                   (states["person.stuart_scott"].state == "Hampden") return
-                  "#000099"; if  (states["person.stuart_scott"].state == "Keiras
-                  D") return "#000099"; if  (states["person.stuart_scott"].state
-                  == "Partick T") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.stuart_scott"].state == "Keiras
+                  D") return "#eeedf2"; if  (states["person.stuart_scott"].state
+                  == "Partick T") return "#eeedf2"; if 
                   (states["person.stuart_scott"].state == "Pure Gym") return
-                  "#000099"; if  (states["person.stuart_scott"].state ==
-                  "School") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.stuart_scott"].state ==
+                  "School") return "#eeedf2"; if 
                   (states["person.stuart_scott"].state == "Sonnys") return
-                  "#000099"; if  (states["person.stuart_scott"].state ==
-                  "Stonelaw HS") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.stuart_scott"].state ==
+                  "Stonelaw HS") return "#eeedf2"; if 
                   (states["person.stuart_scott"].state == "Toryglen") return
-                  "#000099";  else return "#ed1602"; ]]] 
+                  "#eeedf2";  else return "#ed1602"; ]]] 
             battery:
               - align-self: right
               - position: absolute
               - left: 0%
               - top: 80%
-              - font-size: 20px
+              - font-size: 15px
               - color: >-
                   [[[ if
                   (states["sensor.stuartscotts_iphone_battery_level"].state <=
@@ -172,79 +172,79 @@ cards:
               if (states['person.stuart_scott'].state =='Carols W') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.stuart_scott'].state =='Cathkin HS') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;      
               } 
               if (states['person.stuart_scott'].state =='Celtic Park') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;        
               } 
               if (states['person.stuart_scott'].state =='Dylans Club') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.stuart_scott'].state =='Hampden') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.stuart_scott'].state =='Keiras D') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.stuart_scott'].state =='Partick T') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;     
               } 
               if (states['person.stuart_scott'].state =='Partick T') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.stuart_scott'].state =='Pure Gym') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;    
               } 
               if (states['person.stuart_scott'].state =='School') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;      
               } 
               if (states['person.stuart_scott'].state =='Sonnys') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.stuart_scott'].state =='Stonelaw HS') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.stuart_scott'].state =='Toryglen') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;                 
               } else {
               return `<ha-icon 
@@ -256,7 +256,7 @@ cards:
           battery: |
             [[[
                 if (states["sensor.stuartscotts_iphone_battery_level"].state < 30)
-                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging'){ 
                 return `<ha-icon
                 icon="mdi:battery-30"
                 style="width: 30px; height: 30px; color: #ed1602;">
@@ -696,24 +696,23 @@ cards:
               - color: >-
                   [[[ if (states["person.carol_deeley"].state == "home") return
                   "#83ff52"; if  (states["person.carol_deeley"].state == "Carols
-                  W") return  "#000099"; if (states["person.carol_deeley"].state
-                  == "Cathkin HS") return "#000099"; if                  
+                  W") return  "#eeedf2"; if (states["person.carol_deeley"].state
+                  == "Cathkin HS") return "#eeedf2"; if                  
                   (states["person.carol_deeley"].state == "Celtic Park") return
-                  "#000099"; if (states["person.carol_deeley"].state == "Dylans
-                  Club") return "#000099"; if
+                  "#eeedf2"; if (states["person.carol_deeley"].state == "Dylans
+                  Club") return "#eeedf2"; if
                   (states["person.carol_deeley"].state == "Hampden") return
-                  "#000099"; if  (states["person.carol_deeley"].state == "Keiras
-                  D") return "#000099"; if  (states["person.carol_deeley"].state
-                  == "Partick T") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.carol_deeley"].state == "Keiras
+                  D") return "#eeedf2"; if  (states["person.carol_deeley"].state
+                  == "Partick T") return "#eeedf2"; if 
                   (states["person.carol_deeley"].state == "Pure Gym") return
-                  "#000099"; if  (states["person.carol_deeley"].state ==
-                  "School") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.carol_deeley"].state ==
+                  "School") return "#eeedf2"; if 
                   (states["person.carol_deeley"].state == "Sonnys") return
-                  "#000099"; if  (states["person.carol_deeley"].state ==
-                  "Stonelaw HS") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.carol_deeley"].state ==
+                  "Stonelaw HS") return "#eeedf2"; if 
                   (states["person.carol_deeley"].state == "Toryglen") return
-                  "#000099";  else return "#ed1602"; ]]] 
-              - border-radius: 500px
+                  "#eeedf2";  else return "#ed1602"; ]]] 
               - border-radius: 500px
               - margin: 0 +7% 0 0
               - justify-self: center
@@ -721,33 +720,33 @@ cards:
             status:
               - justify-self: end
               - margin-bottom: "-5px"
-              - font-size: 20px
+              - font-size: 15px
               - color: >-
                   [[[ if (states["person.carol_deeley"].state == "home") return
                   "#83ff52"; if  (states["person.carol_deeley"].state == "Carols
-                  W") return  "#000099"; if (states["person.carol_deeley"].state
-                  == "Cathkin HS") return "#000099"; if                  
+                  W") return  "#eeedf2"; if (states["person.carol_deeley"].state
+                  == "Cathkin HS") return "#eeedf2"; if                  
                   (states["person.carol_deeley"].state == "Celtic Park") return
-                  "#000099"; if (states["person.carol_deeley"].state == "Dylans
-                  Club") return "#000099"; if
+                  "#eeedf2"; if (states["person.carol_deeley"].state == "Dylans
+                  Club") return "#eeedf2"; if
                   (states["person.carol_deeley"].state == "Hampden") return
-                  "#000099"; if  (states["person.carol_deeley"].state == "Keiras
-                  D") return "#000099"; if  (states["person.carol_deeley"].state
-                  == "Partick T") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.carol_deeley"].state == "Keiras
+                  D") return "#eeedf2"; if  (states["person.carol_deeley"].state
+                  == "Partick T") return "#eeedf2"; if 
                   (states["person.carol_deeley"].state == "Pure Gym") return
-                  "#000099"; if  (states["person.carol_deeley"].state ==
-                  "School") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.carol_deeley"].state ==
+                  "School") return "#eeedf2"; if 
                   (states["person.carol_deeley"].state == "Sonnys") return
-                  "#000099"; if  (states["person.carol_deeley"].state ==
-                  "Stonelaw HS") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.carol_deeley"].state ==
+                  "Stonelaw HS") return "#eeedf2"; if 
                   (states["person.carol_deeley"].state == "Toryglen") return
-                  "#000099";  else return "#ed1602"; ]]] 
+                  "#eeedf2";  else return "#ed1602"; ]]] 
             battery:
               - align-self: right
               - position: absolute
               - left: 0%
               - top: 80%
-              - font-size: 20px
+              - font-size: 15px
               - color: >-
                   [[[ if (states["sensor.carols_iphone_battery_level"].state <=
                   30) return "#ed1602"; if
@@ -801,79 +800,79 @@ cards:
               if (states['person.carol_deeley'].state =='Carols W') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.carol_deeley'].state =='Cathkin HS') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;      
               } 
               if (states['person.carol_deeley'].state =='Celtic Park') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;        
               } 
               if (states['person.carol_deeley'].state =='Dylans Club') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.carol_deeley'].state =='Hampden') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.carol_deeley'].state =='Keiras D') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.carol_deeley'].state =='Partick T') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;     
               } 
               if (states['person.carol_deeley'].state =='Partick T') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.carol_deeley'].state =='Pure Gym') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;    
               } 
               if (states['person.carol_deeley'].state =='School') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;      
               } 
               if (states['person.carol_deeley'].state =='Sonnys') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.carol_deeley'].state =='Stonelaw HS') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.carol_deeley'].state =='Toryglen') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;                 
               } else {
               return `<ha-icon 
@@ -881,7 +880,7 @@ cards:
                 style="width: 20px; height: 20px; color: #ed1602;">
                 </ha-icon><span> ${entity.state}</span>`;
               }
-            ]]]   
+            ]]] 
           battery: |
             [[[
                 if (states["sensor.carols_iphone_battery_level"].state < 30)
@@ -1135,23 +1134,23 @@ cards:
               - color: >-
                   [[[ if (states["person.dylan_scott"].state == "home") return
                   "#83ff52"; if  (states["person.dylan_scott"].state == "Carols
-                  W") return  "#000099"; if (states["person.dylan_scott"].state
-                  == "Cathkin HS") return "#000099"; if                  
+                  W") return  "#eeedf2"; if (states["person.dylan_scott"].state
+                  == "Cathkin HS") return "#eeedf2"; if                  
                   (states["person.dylan_scott"].state == "Celtic Park") return
-                  "#000099"; if (states["person.dylan_scott"].state == "Dylans
-                  Club") return "#000099"; if
+                  "#eeedf2"; if (states["person.dylan_scott"].state == "Dylans
+                  Club") return "#eeedf2"; if
                   (states["person.dylan_scott"].state == "Hampden") return
-                  "#000099"; if  (states["person.dylan_scott"].state == "Keiras
-                  D") return "#000099"; if  (states["person.dylan_scott"].state
-                  == "Partick T") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.dylan_scott"].state == "Keiras
+                  D") return "#eeedf2"; if  (states["person.dylan_scott"].state
+                  == "Partick T") return "#eeedf2"; if 
                   (states["person.dylan_scott"].state == "Pure Gym") return
-                  "#000099"; if  (states["person.dylan_scott"].state ==
-                  "School") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.dylan_scott"].state ==
+                  "School") return "#eeedf2"; if 
                   (states["person.dylan_scott"].state == "Sonnys") return
-                  "#000099"; if  (states["person.dylan_scott"].state ==
-                  "Stonelaw HS") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.dylan_scott"].state ==
+                  "Stonelaw HS") return "#eeedf2"; if 
                   (states["person.dylan_scott"].state == "Toryglen") return
-                  "#000099";  else return "#ed1602"; ]]] 
+                  "#eeedf2";  else return "#ed1602"; ]]] 
               - border-radius: 500px
               - margin: 0 +7% 0 0
               - justify-self: center
@@ -1159,33 +1158,33 @@ cards:
             status:
               - justify-self: end
               - margin-bottom: "-5px"
-              - font-size: 20px
+              - font-size: 15px
               - color: >-
                   [[[ if (states["person.dylan_scott"].state == "home") return
                   "#83ff52"; if  (states["person.dylan_scott"].state == "Carols
-                  W") return  "#000099"; if (states["person.dylan_scott"].state
-                  == "Cathkin HS") return "#000099"; if                  
+                  W") return  "#eeedf2"; if (states["person.dylan_scott"].state
+                  == "Cathkin HS") return "#eeedf2"; if                  
                   (states["person.dylan_scott"].state == "Celtic Park") return
-                  "#000099"; if (states["person.dylan_scott"].state == "Dylans
-                  Club") return "#000099"; if
+                  "#eeedf2"; if (states["person.dylan_scott"].state == "Dylans
+                  Club") return "#eeedf2"; if
                   (states["person.dylan_scott"].state == "Hampden") return
-                  "#000099"; if  (states["person.dylan_scott"].state == "Keiras
-                  D") return "#000099"; if  (states["person.dylan_scott"].state
-                  == "Partick T") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.dylan_scott"].state == "Keiras
+                  D") return "#eeedf2"; if  (states["person.dylan_scott"].state
+                  == "Partick T") return "#eeedf2"; if 
                   (states["person.dylan_scott"].state == "Pure Gym") return
-                  "#000099"; if  (states["person.dylan_scott"].state ==
-                  "School") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.dylan_scott"].state ==
+                  "School") return "#eeedf2"; if 
                   (states["person.dylan_scott"].state == "Sonnys") return
-                  "#000099"; if  (states["person.dylan_scott"].state ==
-                  "Stonelaw HS") return "#000099"; if 
+                  "#eeedf2"; if  (states["person.dylan_scott"].state ==
+                  "Stonelaw HS") return "#eeedf2"; if 
                   (states["person.dylan_scott"].state == "Toryglen") return
-                  "#000099";  else return "#ed1602"; ]]] 
+                  "#eeedf2";  else return "#ed1602"; ]]] 
             battery:
               - align-self: right
               - position: absolute
               - left: 0%
               - top: 80%
-              - font-size: 20px
+              - font-size: 15px
               - color: >-
                   [[[ if (states["sensor.dylans_iphone_battery_level"].state <=
                   30) return "#ed1602"; if
@@ -1258,79 +1257,79 @@ cards:
               if (states['person.dylan_scott'].state =='Carols W') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.dylan_scott'].state =='Cathkin HS') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;      
               } 
               if (states['person.dylan_scott'].state =='Celtic Park') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;        
               } 
               if (states['person.dylan_scott'].state =='Dylans Club') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.dylan_scott'].state =='Hampden') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.dylan_scott'].state =='Keiras D') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.dylan_scott'].state =='Partick T') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;     
               } 
               if (states['person.dylan_scott'].state =='Partick T') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;   
               } 
               if (states['person.dylan_scott'].state =='Pure Gym') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;    
               } 
               if (states['person.dylan_scott'].state =='School') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;      
               } 
               if (states['person.dylan_scott'].state =='Sonnys') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.dylan_scott'].state =='Stonelaw HS') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`; 
               } 
               if (states['person.dylan_scott'].state =='Toryglen') { 
               return `<ha-icon 
                 icon="mdi:map-marker-radius"
-                style="width: 20px; height: 26px; color: #000099;">
+                style="width: 20px; height: 26px; color: #eeedf2;">
                 </ha-icon><span> ${entity.state}</span>`;                 
               } else {
               return `<ha-icon 
@@ -1338,7 +1337,7 @@ cards:
                 style="width: 20px; height: 20px; color: #ed1602;">
                 </ha-icon><span> ${entity.state}</span>`;
               }
-            ]]]   
+            ]]] 
           battery: |
             [[[
                 if (states["sensor.dylans_iphone_battery_level"].state < 30)
@@ -1718,7 +1717,7 @@ cards:
                 style="width: 28px; height: 28px; color: #83ff52;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;
               }
-            ]]]             
+            ]]]              
           focus: |
             [[[
               if (states["binary_sensor.dylans_iphone_focus"].state == "on")
