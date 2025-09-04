@@ -20,7 +20,7 @@ cards:
             - background-color: rgba(15,15,18,0.4)
             - border-radius: 5%
             - padding: 5%
-            - height: 178px
+            - height: 188px
             - font-size: 10px
             - text-shadow: 0px 0px 0px black
             - text-transform: capitalize
@@ -69,7 +69,7 @@ cards:
             status:
               - justify-self: end
               - margin-bottom: "-5px"
-              - font-size: 15px
+              - font-size: 20px
               - color: >-
                   [[[ if (states["person.stuart_scott"].state == "home") return
                   "#83ff52"; if  (states["person.stuart_scott"].state == "Carols
@@ -95,7 +95,7 @@ cards:
               - position: absolute
               - left: 0%
               - top: 80%
-              - font-size: 15px
+              - font-size: 20px
               - color: >-
                   [[[ if
                   (states["sensor.stuartscotts_iphone_battery_level"].state <=
@@ -255,14 +255,14 @@ cards:
             ]]]  
           battery: |
             [[[
-                if (states["sensor.stuartscotts_iphone_battery_level"].state < 30)
-                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging'){ 
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 30)
+                if (states['sensor.stuartscotts_iphone_battery_state'].state =='Not Charging') { 
                 return `<ha-icon
                 icon="mdi:battery-30"
                 style="width: 30px; height: 30px; color: #ed1602;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.stuartscotts_iphone_battery_level'].state}%</span></span>`;
               }  
-                if (states["sensor.stuartscotts_iphone_battery_level"].state < 30)
+                if (states["sensor.stuartscotts_iphone_battery_level"].state <= 30)
                  if (states['sensor.stuartscotts_iphone_battery_state'].state =='Charging') { 
                     return `
                      <style>   
@@ -671,7 +671,7 @@ cards:
             - background-color: rgba(15,15,18,0.4)
             - border-radius: 5%
             - padding: 5%
-            - height: 178px
+            - height: 188px
             - font-size: 10px
             - text-shadow: 0px 0px 0px black
             - text-transform: capitalize
@@ -714,13 +714,14 @@ cards:
                   (states["person.carol_deeley"].state == "Toryglen") return
                   "#eeedf2";  else return "#ed1602"; ]]] 
               - border-radius: 500px
+              - border-radius: 500px
               - margin: 0 +7% 0 0
               - justify-self: center
               - opacity: 1
             status:
               - justify-self: end
               - margin-bottom: "-5px"
-              - font-size: 15px
+              - font-size: 20px
               - color: >-
                   [[[ if (states["person.carol_deeley"].state == "home") return
                   "#83ff52"; if  (states["person.carol_deeley"].state == "Carols
@@ -746,7 +747,7 @@ cards:
               - position: absolute
               - left: 0%
               - top: 80%
-              - font-size: 15px
+              - font-size: 20px
               - color: >-
                   [[[ if (states["sensor.carols_iphone_battery_level"].state <=
                   30) return "#ed1602"; if
@@ -880,17 +881,17 @@ cards:
                 style="width: 20px; height: 20px; color: #ed1602;">
                 </ha-icon><span> ${entity.state}</span>`;
               }
-            ]]] 
+            ]]]   
           battery: |
             [[[
-                if (states["sensor.carols_iphone_battery_level"].state < 30)
+                if (states["sensor.carols_iphone_battery_level"].state <= 30)
                 if (states['sensor.carols_iphone_battery_state'].state =='Not Charging'){ 
                 return `<ha-icon
                 icon="mdi:battery-30"
                 style="width: 30px; height: 30px; color: #ed1602;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.carols_iphone_battery_level'].state}%</span></span>`;
               }  
-                if (states["sensor.carols_iphone_battery_level"].state < 30)
+                if (states["sensor.carols_iphone_battery_level"].state <= 30)
                  if (states['sensor.carols_iphone_battery_state'].state =='Charging') { 
                     return `
                      <style>   
@@ -1109,7 +1110,7 @@ cards:
             - background-color: rgba(15,15,18,0.4)
             - border-radius: 5%
             - padding: 5%
-            - height: 178px
+            - height: 188px
             - font-size: 10px
             - text-shadow: 0px 0px 0px black
             - text-transform: capitalize
@@ -1135,7 +1136,7 @@ cards:
                   [[[ if (states["person.dylan_scott"].state == "home") return
                   "#83ff52"; if  (states["person.dylan_scott"].state == "Carols
                   W") return  "#eeedf2"; if (states["person.dylan_scott"].state
-                  == "Cathkin HS") return "#eeedf2"; if                  
+                  == "Cathkin HS") return "#eeedf2"; if
                   (states["person.dylan_scott"].state == "Celtic Park") return
                   "#eeedf2"; if (states["person.dylan_scott"].state == "Dylans
                   Club") return "#eeedf2"; if
@@ -1158,7 +1159,7 @@ cards:
             status:
               - justify-self: end
               - margin-bottom: "-5px"
-              - font-size: 15px
+              - font-size: 19px
               - color: >-
                   [[[ if (states["person.dylan_scott"].state == "home") return
                   "#83ff52"; if  (states["person.dylan_scott"].state == "Carols
@@ -1184,7 +1185,7 @@ cards:
               - position: absolute
               - left: 0%
               - top: 80%
-              - font-size: 15px
+              - font-size: 20px
               - color: >-
                   [[[ if (states["sensor.dylans_iphone_battery_level"].state <=
                   30) return "#ed1602"; if
@@ -1337,17 +1338,17 @@ cards:
                 style="width: 20px; height: 20px; color: #ed1602;">
                 </ha-icon><span> ${entity.state}</span>`;
               }
-            ]]] 
+            ]]]   
           battery: |
             [[[
-                if (states["sensor.dylans_iphone_battery_level"].state < 30)
+                if (states["sensor.dylans_iphone_battery_level"].state <= 30)
                 if (states['sensor.dylans_iphone_battery_state'].state =='Not Charging'){ 
                 return `<ha-icon
                 icon="mdi:battery-30"
                 style="width: 30px; height: 30px; color: #ed1602;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_battery_level'].state}%</span></span>`;
               }  
-                if (states["sensor.dylans_iphone_battery_level"].state < 30)
+                if (states["sensor.dylans_iphone_battery_level"].state <= 30)
                  if (states['sensor.dylans_iphone_battery_state'].state =='Charging') { 
                     return `
                      <style>   
@@ -1717,7 +1718,7 @@ cards:
                 style="width: 28px; height: 28px; color: #83ff52;">
                 </ha-icon> <span><span style="color: var(--text-color-sensor);">${states['sensor.dylans_iphone_watch_battery'].state}%</span></span>`;
               }
-            ]]]              
+            ]]]             
           focus: |
             [[[
               if (states["binary_sensor.dylans_iphone_focus"].state == "on")
