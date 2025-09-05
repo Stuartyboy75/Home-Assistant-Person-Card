@@ -1,4 +1,4 @@
-
+![Image](https://github.com/user-attachments/assets/24188684-fb8b-4d84-837d-b2e48240c4d6)
 
 Person Card 2
 
@@ -12,6 +12,7 @@ Watch symbol flashes when charging and changes colour dependant on battery perce
 
 Location
 Location is green when home, white when in a known zone(easier to read from a distance from dashboard) and red when away.
+
 Wifi  = changes to mobile phone and red when disconnect from wifi
 Focus = changes to red when on
 
